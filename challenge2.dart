@@ -1,3 +1,12 @@
+void main() {
+  greet(
+      "hamza"); // i writhe what i want to be printed the value that i want to be printed
+  print(isOdd(
+      7)); // the print take the argument which is the function to print the number that i want to check
+  print(oddsSmallerThan(
+      3)); // the print take the argument which is the function to print the number that i want to check
+  print(squareOrDouble(16));
+}
 /**
  * greet(name):
  * - receives a name,
@@ -6,8 +15,10 @@
  * e.g.
  * greet("Hamza") => prints "Hello Hamza"
  */
+
 void greet(String name) {
   // Your code here
+  print("hello $name");
 }
 
 /**
@@ -21,6 +32,13 @@ void greet(String name) {
  */
 bool isOdd(int n) {
   // Your code here
+  if (n % 2 == 0) {
+    print("this is an even number $n");
+    return true;
+  } else {
+    print("this is an odd number $n");
+    return false;
+  }
 }
 
 /**
@@ -33,6 +51,8 @@ bool isOdd(int n) {
  * oddsSmallerThan(15) -> 7
  */
 int oddsSmallerThan(int n) {
+  return n ~/ 2;
+
   // Your code here
 }
 
@@ -47,5 +67,9 @@ int oddsSmallerThan(int n) {
  * squareOrDouble(9) -> 81
  */
 int squareOrDouble(int n) {
-  // Your code here
+  if (n % 2 == 0) {
+    return n * 2; // Return double if n is even whic is nX2
+  } else {
+    return n * n; // Return square which is nXn if n is odd
+  }
 }
